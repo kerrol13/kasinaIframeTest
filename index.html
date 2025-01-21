@@ -86,27 +86,25 @@
 
     <main class="main-content">
       <iframe
-        src="https://kasina-ai-web.azurewebsites.net/kasina-iframe"
+        src="https://kasina-chatbot-web.azurewebsites.net/kasina-iframe"
         id="loginIframe"
         style="width: 100%; height: 100%; border: none"
         onload="handleIframeLoad()"
       ></iframe>
     </main>
-  </body>
 
-  <script>
-    function handleIframeLoad() {
-      window.addEventListener("message", (event) => {
+    <script>
+      function handleIframeLoad() {
         // Send USER_ID message
         const iframe = document.getElementById("loginIframe");
         iframe.contentWindow.postMessage(
           {
             type: "USER_ID",
-            data: { userId: "ABB33292-61F3-4F80-8630-1F4AFC40950B" },
+            data: { userId: "3341101B-3043-4AD2-83C8-5307250F66E9" },
           },
-          "https://kasina-ai-web.azurewebsites.net/kasina-iframe"
+          "https://kasina-chatbot-web.azurewebsites.net/kasina-iframe"
         );
-      });
-    }
-  </script>
+      }
+    </script>
+  </body>
 </html>
